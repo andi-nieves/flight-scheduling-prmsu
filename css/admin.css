@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap');
+:root {
+  --main-bg-color: #001253;
+  --main-text-color: #001253;
+  --second-text-color: #000000;
+  --second-bg-color: #FD841F;
+  --third-text-color: #ffffff;
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.second-text {
+  color: var(--second-text-color);
+}
+
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+  background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#wrapper {
+  overflow-x: hidden;
+  /* background-color: #f5cba9 ;  */
+   background-image: linear-gradient(
+    to right,
+    #f0f0f0,
+    #f0f0f0
+  );
+}
+
+#sidebar-wrapper {
+     background-image: linear-gradient(
+    to right,
+    #aaaaaa,#aaaaaa
+  );  
+  min-height: 100vh;
+  margin-left: -16rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+.list-group.list-group-flush.my-2.mx-1{
+  --bs-list-group-bg: ;
+}
+
+.list-group.list-group-flush.my-2.mx-lg-1{
+  --bs-list-group-bg: ;
+}
+
+.list-group-item.active {
+  background-color: var(--second-bg-color);
+  color: var(--third-text-color);
+  font-weight:500;
+  border: none;
+  border-radius: 15px;
+}
+#logo{
+  width: 200px;
+}
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -16rem;
+  }
+}
+
+
+/**Windy**/
+#windy,.card-body{
+  width: 100%;
+  height: 600px;
+  overflow: visible;
+}
+
+.progress-bar{
+  overflow: visible;
+}
+
+#windy #logo-wrapper #logo {
+  display: none;
+} 
+
+a i.fas.fa-user.me-2{
+  color: black;
+}
+
+/* footer {
+  background-color: #fb9d50;
+  height: 40px;
+  display: grid;
+  align-content: center;
+} */
+
+@media (max-width: 1002px){
+  .table#myTable thead{
+    display: none;
+  }
+  .table#myTable, .table#myTable  tbody, .table#myTable  tr, .table#myTable td{
+    display: block;
+    width: 100%;
+  }
+  .table#myTable tr{
+    margin-bottom: 15px;
+  }
+  .table#myTable  tbody tr td{
+    text-align: right;
+    padding-right: 5%;
+  }
+  .table#myTable  td::before{
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+  }
+}
